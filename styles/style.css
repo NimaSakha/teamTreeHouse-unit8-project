@@ -1,1 +1,103 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+}
+.modal {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  left: 50%;
+  margin-left: -225px;
+  top: 50%;
+  margin-top: -300px;
+  z-index: 2;
+  position: absolute;
+  background-color: white;
+  width: 450px;
+  height: 550px;
+  border: 3px solid lightgray;
+  border-radius: 5px;
+}
+.modal img {
+  border-radius: 50%;
+}
+.modal hr {
+  width: 100%;
+}
+.modal button {
+  aspect-ratio: 1/1;
+  border: none;
+  background-color: white;
+  font-size: larger;
+}
+.modal button:hover {
+  background-color: rgb(220, 220, 220);
+  border-radius: 50%;
+}
+
+.esc {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.cntr {
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dark {
+  height: 110vh;
+  padding-bottom: 10px;
+  overflow-y: hidden;
+}
+.dark::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 900%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgb(0, 0, 0);
+  background: transparent\9;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+.body {
+  display: none;
+  grid-auto-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+}
+.container {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  border: 3px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  gap: 20px;
+}
+.pfp {
+  width: 25%;
+
+  border-radius: 50%;
+}
+@media only screen and (min-width: 800px) {
+  .body {
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .body {
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
